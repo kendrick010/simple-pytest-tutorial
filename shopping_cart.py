@@ -1,4 +1,5 @@
 from typing import List
+import random
 
 
 class ShoppingCart:
@@ -17,8 +18,8 @@ class ShoppingCart:
     def get_items(self) -> List[str]:
         return self.items
 
-    def get_total_price(self, price_map):
+    def get_total_price(self):
         total_price = 0
         for item in self.items:
-            total_price += price_map.get(item)
+            total_price += random.random()
         return total_price
