@@ -42,6 +42,5 @@ def test_can_get_total_price(cart):
         if item == "orange":
             return 2.0
 
-    random.random = Mock(return_value=30)
-    print(cart.get_total_price())
-    assert cart.get_total_price() == 20
+    item_database.get = Mock(side_effect=mock_get_item)
+    assert cart.get_total_price(item_database) == 3.0

@@ -20,8 +20,8 @@ class ShoppingCart:
     def get_items(self) -> List[str]:
         return self.items
 
-    def get_total_price(self):
+    def get_total_price(self, price_map):
         total_price = 0
         for item in self.items:
-            total_price += random.random()
+            total_price += price_map.get(item)
         return total_price
