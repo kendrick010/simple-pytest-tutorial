@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from unittest.mock import Mock
 from item_database import ItemDatabase
 from shopping_cart import ShoppingCart
